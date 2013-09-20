@@ -1,3 +1,9 @@
 class Restaurant < ActiveRecord::Base
-  # attr_accessible :title, :body
+	# this is a rails thing - mass assignment
+	attr_accessible :name
+
+	# this is a ruby thing - this makes getters and setters
+	# attr_accessor
+
+	attr_accessor :poop
 end
