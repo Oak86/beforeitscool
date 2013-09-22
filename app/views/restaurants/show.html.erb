@@ -2,5 +2,8 @@
 <p>Hours: <%= @restaurant[:opentime] %> to <%= @restaurant[:closetime] %><br>
 	<%= @restaurant[:phone] %></p>
 	<p><%= @restaurant[:address] %> <%= @restaurant[:street] %>, <%= @restaurant[:city] %> <%= @restaurant[:postal] %></p>
+	<p>
+		Cuisine-Type: <%= @restaurant.tag_list %>
+	</p>
 
 <%= link_to "Nope. Lemme see the list again.", restaurants_path %>
