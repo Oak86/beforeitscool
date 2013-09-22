@@ -1,5 +1,7 @@
 <h1>Welcome to the Grand List of Restaurants!</h1>
 
 <% @restaurants.each do |r| %>
-	<p><%= r.name %></p>
+	<p><%=link_to r.name, restaurant_path(r.id)%></p>
+
+
 <% end %>

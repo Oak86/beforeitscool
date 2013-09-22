@@ -1,5 +1,4 @@
 Beforeitscool::Application.routes.draw do
   resources :restaurants
-
-    # root :to => "restaurants#index"
+    root :to => "restaurants#index"
 end
