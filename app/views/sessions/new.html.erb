@@ -1,0 +1,19 @@
+<h1>Welcome Back! Who are you again?</h1>
+
+<%= form_tag sessions_path do %>
+	<div class="Field">
+		<%= label_tag :email %>
+		<%= text_field_tag :email, params[:email] %>
+	</div>
+	<div class="Field">
+		<%= label_tag :password %>
+		<%= text_field_tag :password %>
+	</div>
+	<div class="Field">
+		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+		<%= label_tag :remember_me %>
+	</div>
+	<div class="Something">
+		<%= submit_tag "Log In" %>
+	</div>
+<% end %>

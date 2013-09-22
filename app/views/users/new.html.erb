@@ -1,0 +1,29 @@
+<h1>Sign Up for This Nifty Site!</h1>
+<%= form_for @user do |u| %>
+	<% if @user.errors.any? %>
+		<div class="Errors">
+			<h2>Uh oh. Something has gone terribly awry.</h2>
+			<ul>
+				<% for message in @user.errors.full_messages %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="Field">
+		<%= u.label :email %><br>
+		<%= u.text_field :email %>
+	</div>
+	<div class="Field">
+		<%= u.label :password %><br>
+		<%= u.text_field :password %>
+	</div>
+	<div class="Field">
+		<%= u.label :password_confirmation %><br>
+		<%= u.text_field :password_confirmation %>
+	</div>
+	<div class="Something">
+		<%= u.submit %>
+	</div>
+<% end %>
